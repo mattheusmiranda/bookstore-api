@@ -2,15 +2,12 @@ package com.br.bookstore2.domain;
 
 import java.io.Serializable;
 import java.util.Objects;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-
-import org.hibernate.annotations.ManyToAny;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Livro implements Serializable {
@@ -24,7 +21,7 @@ public class Livro implements Serializable {
 	private String nomeAutor;
 	private String texto;
 
-	@ManyToAny(metaColumn = @Column)
+	@ManyToOne
 	@JoinColumn(name = "categoria_id")
 	private Categoria categoria;
 
