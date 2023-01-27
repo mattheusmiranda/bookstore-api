@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.br.bookstore2.domain.Categoria;
 
-@Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer>{
 
 }
