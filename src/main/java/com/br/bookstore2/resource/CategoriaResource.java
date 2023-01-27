@@ -1,5 +1,6 @@
 package com.br.bookstore2.resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,8 @@ import com.br.bookstore2.domain.Categoria;
 @RequestMapping("/categorias")
 public class CategoriaResource {
 
+	@Autowired
+	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Categoria> findById(@PathVariable Integer id){
 		
