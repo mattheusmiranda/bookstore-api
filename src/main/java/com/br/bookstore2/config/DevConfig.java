@@ -18,11 +18,4 @@ public class DevConfig {
 	@Value("${spring.jpa.hibernate.ddl-auto}")
 	private String strategy;
 	
-	@Bean
-	public boolean instaciaBaseDeDados() {
-		if(strategy.equals("create")) {
-			this.dbService.instanciaBaseDeDados();
-		}
-		return false;
-	}
 }
